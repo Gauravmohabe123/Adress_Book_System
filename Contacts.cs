@@ -15,18 +15,8 @@ namespace Adress_Book_System
         public string phonenumbur;
         public string email;
 
-        public override string ToString()
-        {
-            return @$"
-          Name: {FirstName} {LastName}
-          Address: {this.Adress} 
-          City: {this.City}
-          State: {this.State}
-          Zipcode: {this.zipCode}
-          PhoneNumber:{this.phonenumbur}
-          Email: {this.email}
-                   ";
-        }
+        
+        
 
 
     }

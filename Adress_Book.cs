@@ -6,6 +6,12 @@ namespace Adress_Book_System
 {
     internal class Adress_Book
     {
+        List<Contacts> contacts;
+        public Adress_Book()
+        {
+         contacts  = new List<Contacts>();
+        }
+
         public Contacts AddContact()
         {
             Contacts contact = new Contacts();
@@ -25,8 +31,35 @@ namespace Adress_Book_System
             contact.phonenumbur = Console.ReadLine();
             Console.WriteLine("Enter your email ");
             contact.email = Console.ReadLine();
+            contacts.Add(contact);
 
             return contact;
         }
-    }
-}
+        public void  show()
+        {
+
+            if (contacts.Count <= 0)
+            {
+                Console.WriteLine("No contacts available");
+            }
+            else
+            {
+                foreach (var contact in contacts)
+                {
+                    Console.WriteLine
+                   (@$"
+                      Name: {contact.FirstName} {contact.LastName}
+                      Address: {contact.Adress} 
+                      City: {contact.City}
+                      State: {contact.State}
+                      Zipcode: {contact.zipCode}
+                      PhoneNumber:{contact.phonenumbur}
+                      Email: {contact.email}
+                  ");
+
+                }
+
+            }
+        }
+        }
+        }
