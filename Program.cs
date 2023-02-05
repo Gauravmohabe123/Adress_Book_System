@@ -7,6 +7,9 @@ namespace Adress_Book_System
         static void Main(string[] args)
         {
             Console.WriteLine("Address Book System");
+            Adress_Book adress = new Adress_Book();
+            Console.WriteLine(adress.AddContact());
+
         }
     }
 }
